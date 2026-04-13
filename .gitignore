@@ -1,0 +1,8 @@
+# ── Configuración con credenciales (generada por GitHub Actions) ──
+# Este archivo NUNCA debe subirse al repositorio.
+# En local lo creas manualmente a partir de config.example.js
+js/config.js
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db

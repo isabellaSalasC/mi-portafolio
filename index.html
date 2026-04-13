@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex García — Desarrollador de Software</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- EmailJS SDK — permite enviar emails desde el navegador sin backend -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVEGACIÓN
+  ════════════════════════════════════════════ -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <span class="nav-brand">&lt;AlexDev /&gt;</span>
+
+      <ul class="nav-links">
+        <li><a href="#inicio"     class="nav-link">Inicio</a></li>
+        <li><a href="#sobre-mi"   class="nav-link">Sobre mí</a></li>
+        <li><a href="#proyectos"  class="nav-link">Proyectos</a></li>
+        <li><a href="#contacto"   class="nav-link">Contacto</a></li>
+      </ul>
+
+      <button id="menu-btn" class="nav-toggle" aria-label="Abrir menú">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="nav-mobile">
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════ -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Hola, mi nombre es</p>
+      <h1 class="hero-title">Alex García</h1>
+      <h2 class="hero-subtitle">
+        Desarrollador <span id="typed-text"></span>
+      </h2>
+      <p class="hero-description">
+        Apasionado por construir aplicaciones web modernas, escalables
+        y con excelente experiencia de usuario.
+      </p>
+      <div class="hero-actions">
+        <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+        <a href="#contacto"  class="btn btn-outline">Contáctame</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SOBRE MÍ
+  ════════════════════════════════════════════ -->
+  <section id="sobre-mi" class="section">
+    <h2 class="section-title">Sobre mí</h2>
+
+    <div class="about-grid">
+      <!-- Foto / avatar -->
+      <div class="about-avatar">
+        <!-- Reemplaza este div con una etiqueta <img> cuando tengas tu foto -->
+        <img src="https://placehold.co/180x180/1e293b/6366f1?text=Foto" alt="Foto de Alex García" width="180" height="180" />
+      </div>
+
+      <!-- Biografía y habilidades -->
+      <div class="about-bio">
+        <p>
+          Soy desarrollador de software con 3 años de experiencia creando productos
+          digitales. Me especializo en el desarrollo web fullstack, con énfasis en
+          React y Node.js.
+        </p>
+        <p>
+          Actualmente busco oportunidades donde pueda aportar valor, seguir aprendiendo
+          y trabajar en equipo para resolver problemas reales.
+        </p>
+
+        <ul class="skills-list">
+          <li class="skill-tag">JavaScript</li>
+          <li class="skill-tag">TypeScript</li>
+          <li class="skill-tag">React</li>
+          <li class="skill-tag">Node.js</li>
+          <li class="skill-tag">Python</li>
+          <li class="skill-tag">SQL</li>
+          <li class="skill-tag">Git</li>
+          <li class="skill-tag">Docker</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PROYECTOS
+  ════════════════════════════════════════════ -->
+  <section id="proyectos" class="section section-alt">
+    <h2 class="section-title">Proyectos destacados</h2>
+
+    <div class="projects-grid">
+
+      <article class="project-card">
+        <p class="project-icon">&#127748;</p>
+        <h3 class="project-title">WeatherApp</h3>
+        <p class="project-description">
+          Aplicación del clima en tiempo real que consume la API de OpenWeather,
+          con búsqueda por ciudad y pronóstico de 5 días.
+        </p>
+        <ul class="project-tech">
+          <li class="tech-tag">React</li>
+          <li class="tech-tag">API REST</li>
+          <li class="tech-tag">CSS</li>
+        </ul>
+        <div class="project-links">
+          <a href="#">Demo</a>
+          <a href="#" class="secondary">GitHub</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <p class="project-icon">&#9989;</p>
+        <h3 class="project-title">TaskFlow</h3>
+        <p class="project-description">
+          Gestor de tareas con drag &amp; drop, categorías, fechas de vencimiento
+          y sincronización en tiempo real con Firebase.
+        </p>
+        <ul class="project-tech">
+          <li class="tech-tag">Vue.js</li>
+          <li class="tech-tag">Firebase</li>
+          <li class="tech-tag">Tailwind</li>
+        </ul>
+        <div class="project-links">
+          <a href="#">Demo</a>
+          <a href="#" class="secondary">GitHub</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <p class="project-icon">&#128722;</p>
+        <h3 class="project-title">ShopAPI</h3>
+        <p class="project-description">
+          API REST para e-commerce con autenticación JWT, manejo de inventario,
+          carrito de compras y pasarela de pagos (Stripe).
+        </p>
+        <ul class="project-tech">
+          <li class="tech-tag">Node.js</li>
+          <li class="tech-tag">Express</li>
+          <li class="tech-tag">PostgreSQL</li>
+        </ul>
+        <div class="project-links">
+          <a href="#">Docs</a>
+          <a href="#" class="secondary">GitHub</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACTO — Sistema de notificaciones
+  ════════════════════════════════════════════ -->
+  <section id="contacto" class="section">
+    <h2 class="section-title">Contáctame</h2>
+
+    <div class="contact-wrapper">
+      <p class="contact-description">
+        ¿Tienes un proyecto en mente o quieres trabajar juntos? ¡Escríbeme!
+      </p>
+
+      <!--
+        FORMULARIO DE CONTACTO
+        Al hacer submit → JavaScript captura el evento → EmailJS envía el email.
+        Los atributos "name" de cada campo se mapean a las variables del template:
+          name="from_name"  → {{from_name}}
+          name="from_email" → {{from_email}}
+          name="subject"    → {{subject}}
+          name="message"    → {{message}}
+      -->
+      <form id="contact-form" novalidate>
+
+        <div class="form-group">
+          <label for="from_name">Nombre completo</label>
+          <input
+            type="text"
+            id="from_name"
+            name="from_name"
+            class="form-input"
+            placeholder="María López"
+            required
+          />
+          <span class="field-error">Este campo es requerido.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="from_email">Correo electrónico</label>
+          <input
+            type="email"
+            id="from_email"
+            name="from_email"
+            class="form-input"
+            placeholder="maria@ejemplo.com"
+            required
+          />
+          <span class="field-error">Ingresa un correo válido.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Asunto</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            class="form-input"
+            placeholder="Propuesta de proyecto"
+            required
+          />
+          <span class="field-error">Este campo es requerido.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea
+            id="message"
+            name="message"
+            class="form-input"
+            rows="5"
+            placeholder="Hola Alex, me gustaría hablar sobre..."
+            required
+          ></textarea>
+          <span class="field-error">Escribe tu mensaje.</span>
+        </div>
+
+        <button type="submit" id="submit-btn" class="btn btn-primary form-submit">
+          <span id="btn-text">Enviar mensaje</span>
+          <span id="btn-spinner" class="spinner"></span>
+        </button>
+
+      </form>
+
+      <!-- Mensajes de resultado -->
+      <div id="alert-success" class="alert alert-success">
+        Mensaje enviado correctamente. Te respondere pronto.
+      </div>
+      <div id="alert-error" class="alert alert-error">
+        Ocurrio un error al enviar. Intentalo de nuevo.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="footer">
+    <p>Diseñado y construido por <span class="footer-name">Alex García</span> · 2024</p>
+    <ul class="footer-links">
+      <li><a href="#">GitHub</a></li>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">Twitter</a></li>
+    </ul>
+  </footer>
+
+  <!-- Credenciales de EmailJS (generado por CI, excluido del repo con .gitignore) -->
+  <script src="js/config.js"></script>
+  <!-- Lógica principal -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
