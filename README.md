@@ -136,8 +136,8 @@ Secrets (GitHub) → GitHub Actions → genera config.js → despliega en Pages
 ## Paso 3 — Personalizar el portafolio
 
 Edita `index.html` y cambia:
-- [ ] Tu nombre (busca "Alex García")
-- [ ] Tu título profesional (hero section)
+- [x] Tu nombre (busca "Alex García")
+- [x] Tu título profesional (hero section)
 - [ ] Tu descripción en "Sobre mí"
 - [ ] Tus skills (badges en la sección Sobre mí)
 - [ ] Los proyectos (nombres, descripciones, tecnologías)

@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Esto autentica las llamadas a la API sin exponer una clave privada.
   emailjs.init(EMAILJS_PUBLIC_KEY);
 
-  initTypingEffect();
   initScrollReveal();
   initActiveNav();
   initMobileMenu();
@@ -60,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /* ─── EFECTO DE TIPEO EN EL HERO ────────────────────────────────── */
-function initTypingEffect() {
+/*function initTypingEffect() {
   const element  = document.getElementById('typed-text');
   const words    = ['Frontend', 'Backend', 'Fullstack', 'Móvil'];
   let   wordIdx  = 0;
@@ -91,7 +90,7 @@ function initTypingEffect() {
   }
 
   type();
-}
+}*/
 
 
 /* ─── REVEAL ON SCROLL (Intersection Observer) ──────────────────── */
